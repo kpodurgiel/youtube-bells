@@ -7,7 +7,7 @@
 3. Run the script below in your console (`Ctrl+Shift+J`/`Cmd+Alt+J`):
 
 ```javascript
-(function(){
+(()=>{
 var bellOption = 3;
 /* alternatively you may change the 3 above (which stands for "None") to:
  * 1 for "All"
@@ -19,8 +19,10 @@ document.querySelectorAll("ytd-subscription-notification-toggle-button-renderer 
 	i += 10;
 	setTimeout((el)=>{
 		el.click();
-		document.querySelector("#items > ytd-menu-service-item-renderer:nth-child(bellOption)").click();
+		document.querySelector(`#items > ytd-menu-service-item-renderer:nth-child(${bellOption})`).click();
 	}, i, el);
 });
 })();
 ```
+
+Yeah, I know – it's a bit tacky... But hey! It did its job straight away with just a few lines of code 🤷🏽‍♂️
